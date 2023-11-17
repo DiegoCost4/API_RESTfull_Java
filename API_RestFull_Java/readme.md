@@ -16,6 +16,7 @@ O projeto **Folha de Pagamento** é uma aplicação de API Restful desenvolvida 
 
 O backend foi desenvolvido utilizando o framework Spring Boot. A estrutura do projeto está organizada da seguinte forma:
 
+```plaintext
 projeto-apirestfull
 │
 ├── src
