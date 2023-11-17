@@ -11,35 +11,7 @@ O projeto **Folha de Pagamento** é uma aplicação de API Restful desenvolvida 
 - [PostgreSQL](https://www.postgresql.org/)
 - [JPA](https://spring.io/projects/spring-data-jpa)
 - [JDBC](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)
-
-## Estrutura do Projeto
-
-O backend foi desenvolvido utilizando o framework Spring Boot. A estrutura do projeto está organizada da seguinte forma:
-
-```plaintext
-projeto-apirestfull
-│
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   ├── com.exemplo.apirestfull
-│   │   │   │   ├── controller
-│   │   │   │   │   ├── FuncionarioController.java
-│   │   │   │   │   └── UsuarioController.java
-│   │   │   │   ├── model
-│   │   │   │   │   ├── Funcionario.java
-│   │   │   │   │   └── Usuario.java
-│   │   │   │   ├── repository
-│   │   │   │   │   ├── FuncionarioRepository.java
-│   │   │   │   │   └── UsuarioRepository.java
-│   │   │   │   └── service
-│   │   │   │       ├── FuncionarioService.java
-│   │   │   │       └── UsuarioService.java
-│   │   │   └── ProjetoFolhaPagamentoApplication.java
-│   │   └── resources
-│   │       └── application.properties
-└── pom.xml
-
+- 
 ## Endpoints da API
 
 ### Funcionários
@@ -77,7 +49,6 @@ A seguir, estão alguns exemplos práticos de como realizar requisições para a
 
 ### Requisição GET - Listar Todos os Funcionários
 
-```http
 GET /api/funcionarios
 ## Requisição POST - Criar Novo Funcionário
 
@@ -106,5 +77,32 @@ Content-Type: application/json
   "salary": 4500.0,
   "observation": "Contratacao PJ"
 }
+## Estrutura do Projeto
+
+O backend foi desenvolvido utilizando o framework Spring Boot. A estrutura do projeto está organizada da seguinte forma:
+
+```plaintext
+projeto-apirestfull
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   ├── com.exemplo.apirestfull
+│   │   │   │   ├── controller
+│   │   │   │   │   ├── FuncionarioController.java
+│   │   │   │   │   └── UsuarioController.java
+│   │   │   │   ├── model
+│   │   │   │   │   ├── Funcionario.java
+│   │   │   │   │   └── Usuario.java
+│   │   │   │   ├── repository
+│   │   │   │   │   ├── FuncionarioRepository.java
+│   │   │   │   │   └── UsuarioRepository.java
+│   │   │   │   └── service
+│   │   │   │       ├── FuncionarioService.java
+│   │   │   │       └── UsuarioService.java
+│   │   │   └── ProjetoFolhaPagamentoApplication.java
+│   │   └── resources
+│   │       └── application.properties
+└── pom.xml
 
 
