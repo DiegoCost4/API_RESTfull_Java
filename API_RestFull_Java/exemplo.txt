@@ -1,0 +1,21 @@
+Criar uma API REstFull para controle de funcionario
+
+
+
+Model: 
+    Funcionario: Id, Nome, cpf, endereço, telefone, cargo, salario, observação 
+
+Repositorio de funcionario:
+    obterTodos, obterPorId, adicionar, atualizar, deletar
+
+Serviço de produto:
+    obterTodos, obterPorId, adicionar, atualizar, deletar
+
+Controller de produto:
+    obterTodos, obterPorId, adicionar, atualizar, deletar
+
+
+    API CRIADA 
+
+
+    Modelar Banco de dados para conectar a API 

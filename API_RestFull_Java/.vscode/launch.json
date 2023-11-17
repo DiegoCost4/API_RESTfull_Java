@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiRestFullApplication<api-rest-full>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.apirestfull.apirestfull.ApiRestFullApplication",
+            "projectName": "api-rest-full",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
