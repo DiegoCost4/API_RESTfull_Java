@@ -51,7 +51,7 @@ A seguir, estão alguns exemplos práticos de como realizar requisições para a
 
 GET /api/funcionarios
 ## Requisição POST - Criar Novo Funcionário
-
+```http
 POST /api/funcionarios
 Content-Type: application/json
 
