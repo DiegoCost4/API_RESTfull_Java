@@ -6,21 +6,22 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.apirestfull.apirestfull.model.Usuarios;
-import com.apirestfull.apirestfull.repository.UsuarioRepository;
+import com.apirestfull.apirestfull.model.Cargos;
+import com.apirestfull.apirestfull.repository.CargoRepository;
+
 
 @Service
-public class UsuarioService {
-
+public class CargoService {
+    
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private CargoRepository cargoRepository;
 
     /**
-     * Metodo para retornar uma lista de usuarios
-     * @return lista de usuarios
+     * Metodo para retornar uma lista de cargos
+     * @return lista de cargos
      */
-    public List<Usuarios> obterTodos(){
-        return usuarioRepository.findAll();
+    public List<Cargos> obterTodos(){
+        return cargoRepository.findAll();
     }
 
     /**
@@ -28,19 +29,19 @@ public class UsuarioService {
      * @param id do usuario que será localizado
      * @return Retorna um usuario caso seja encontrado.
      */
-    public Optional<Usuarios> obterPorId(Integer id){
+    public Optional<Cargos> obterPorId(Integer id){
         //criar regras de negocio
-        return usuarioRepository.findById(id);
+        return cargoRepository.findById(id);
     }
     /**
      * Metodo para adicionar um usuario na lista
      * @param usuarios que será adicionado
      * @return retorna o usuario que foi adicionado na lista
      */
-    public Usuarios adicionar(Usuarios usuarios){
+    public Cargos adicionar(Cargos cargos){
 
         //Criar regras de negocio
-        return usuarioRepository.save(usuarios);
+        return cargoRepository.save(cargos);
     }
     /**
      * Metodo para deletar o usuario por id
@@ -48,16 +49,14 @@ public class UsuarioService {
      */
     public void deletar(Integer id){
         //Criar regra de negocio.
-        usuarioRepository.deleteById(id);
+        cargoRepository.deleteById(id);
     }
     
-    public Usuarios atualizar(Integer id,Usuarios usuarios){
+    public Cargos atualizar(Integer id,Cargos cargos){
         //Criar regras de negocio.
-        usuarios.setId(id);
+        cargos.setId(id);
 
-        return usuarioRepository.save(usuarios);
+        return cargoRepository.save(cargos);
     }
-
-    
     
 }

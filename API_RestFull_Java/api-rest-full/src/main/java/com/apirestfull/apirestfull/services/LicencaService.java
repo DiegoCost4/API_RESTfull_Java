@@ -6,58 +6,58 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.apirestfull.apirestfull.model.Usuarios;
-import com.apirestfull.apirestfull.repository.UsuarioRepository;
+import com.apirestfull.apirestfull.model.LicencaModel;
+import com.apirestfull.apirestfull.repository.LicencaRepository;
 
 @Service
-public class UsuarioService {
+public class LicencaService {
 
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private LicencaRepository licencaRepository;
 
-    /**
+     /**
      * Metodo para retornar uma lista de usuarios
      * @return lista de usuarios
      */
-    public List<Usuarios> obterTodos(){
-        return usuarioRepository.findAll();
+    public List<LicencaModel> obterTodos(){
+        return licencaRepository.findAll();
     }
 
-    /**
+        /**
      * Metodo que retorna o usuario encontrado pelo seu ID
      * @param id do usuario que será localizado
      * @return Retorna um usuario caso seja encontrado.
      */
-    public Optional<Usuarios> obterPorId(Integer id){
+    public Optional<LicencaModel> obterPorId(Long id){
         //criar regras de negocio
-        return usuarioRepository.findById(id);
+        return licencaRepository.findById(id);
     }
+
     /**
      * Metodo para adicionar um usuario na lista
      * @param usuarios que será adicionado
      * @return retorna o usuario que foi adicionado na lista
      */
-    public Usuarios adicionar(Usuarios usuarios){
+    public LicencaModel adicionar(LicencaModel licencaModel){
 
         //Criar regras de negocio
-        return usuarioRepository.save(usuarios);
+        return licencaRepository.save(licencaModel);
     }
     /**
      * Metodo para deletar o usuario por id
      * @param id do usuario a ser deletado.
      */
-    public void deletar(Integer id){
+    public void deletar(Long id){
         //Criar regra de negocio.
-        usuarioRepository.deleteById(id);
+        licencaRepository.deleteById(id);
     }
-    
-    public Usuarios atualizar(Integer id,Usuarios usuarios){
+    public LicencaModel atualizar(Long id,LicencaModel licencaModel){
         //Criar regras de negocio.
-        usuarios.setId(id);
+        licencaModel.setId(id);
 
-        return usuarioRepository.save(usuarios);
+        return licencaRepository.save(licencaModel);
     }
 
-    
+
     
 }

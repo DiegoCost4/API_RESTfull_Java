@@ -1,5 +1,8 @@
 package com.apirestfull.apirestfull.model;
 
+import java.time.LocalDate;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,9 +28,53 @@ public class Funcionario {
     private Float salary;
 
     private String observation;
+
+    private String tipo;
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    private LocalDate dataInicio;
+
+    private LocalDate dataFim;
+
+    public LocalDate getDataInicio() {
+        return dataInicio;
+    }
+
+    public void setDataInicio(LocalDate dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+    public LocalDate getDataFim() {
+        return dataFim;
+    }
+
+    public void setDataFim(LocalDate dataFim) {
+        this.dataFim = dataFim;
+    }
+
+    @Column(name = "salario_liquido")
+    private double salarioLiquido;
+
+    @Column(name = "imposto_renda")
+    private double impostoRenda;
+
+    @Column(name = "inss")
+    private double inss;
+
+    @Column(name = "horas_extras_trabalhadas")
+    private Float horasExtrasTrabalhadas;
+    
+    @Column(name = "salario_total")
+    private double salarioTotal;
     //#endregion 
 
-    //#region Getters e Setters
     public Integer getId() {
         return id;
     }
@@ -91,7 +138,49 @@ public class Funcionario {
     public void setObservation(String observation) {
         this.observation = observation;
     }
-    //#endregion
-    
+
+    public double getSalarioLiquido() {
+        return salarioLiquido;
+    }
+
+    public void setSalarioLiquido(double salarioLiquido) {
+        this.salarioLiquido = salarioLiquido;
+    }
+
+    public double getImpostoRenda() {
+        return impostoRenda;
+    }
+
+    public void setImpostoRenda(double impostoRenda) {
+        this.impostoRenda = impostoRenda;
+    }
+
+    public double getInss() {
+        return inss;
+    }
+
+    public void setInss(double inss) {
+        this.inss = inss;
+    }
+
+    public Float getHorasExtrasTrabalhadas() {
+        return horasExtrasTrabalhadas;
+    }
+
+    public void setHorasExtrasTrabalhadas(Float horasExtrasTrabalhadas) {
+        this.horasExtrasTrabalhadas = horasExtrasTrabalhadas;
+    }
+
+    public double getSalarioTotal() {
+        return salarioTotal;
+    }
+
+    public void setSalarioTotal(double salarioTotal) {
+        this.salarioTotal = salarioTotal;
+    }
+
+
+
+
     
 }
